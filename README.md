@@ -7,10 +7,10 @@ Consiste en un sistema operativo Linux embebido y especializado, diseñado para 
 #Objetivos
 - Control Operativo:Monitoreo en tiempo real de consolas mediante daemons en segundo plano.
 - Módulo Financiero:Automatización de cobros, registro de flujo de caja y eliminación de errores manuales.
-- Ejecución de Apps; Integración de **Waydroid** sobre un compositor **Wayland** para ejecutar el módulo financiero de manera eficiente.
+- Ejecución de Apps; Integración de "Waydroid" sobre un compositor "Wayland" para ejecutar el módulo financiero de manera eficiente.
 
  #Stack Tecnológico y Requerimientos Clave
-- Base: Linux (Kernel personalizado con soporte para `memfd` en lugar de `ashmem`).
+- Base: Linux (Kernel personalizado con soporte para memfd en lugar de ashmem).
 - Gráficos: Compositor Wayland (requisito excluyente para Waydroid).
 - Contenedores:Waydroid.
 - Licencia: Software Libre / Código Abierto.
@@ -21,7 +21,17 @@ Consiste en un sistema operativo Linux embebido y especializado, diseñado para 
 - Gabriel Emilio (C.I: 28.249.117)
 - Tutora:Prof. Yanmar Rodriguez
 
-#Estructura del Proyecto
-- `/os-build`: Configuración del kernel y sistema base.
-- `/apps`: Código fuente de los módulos de control y financiero.
-- `/docs`: Documentación técnica y capítulos de la investigación.
+## Estructura del Proyecto:
+*/docs: Documentación técnica, capítulos de la investigación y plan de acción.
+
+*/uefi: Configuración y scripts de particionado y arranque UEFI (boot,system, data).
+
+*/kernel: Configuración del kernel y módulos/IPC (Binder,memfd/Ashmem).
+
+*/wayland-waydroid: Configuración del compositor Wayland y despliegue de Waydroid.
+
+*/memory-cgroups: Reglas y ajustes de zRAM,cgroups v2 y lmkd.
+
+*/daemon: Código y servicio del "daemon" de gestión de alquileres y control financiero.
+
+*scripts: Scripts de automatización, despliegue y utilidades del sistema.
