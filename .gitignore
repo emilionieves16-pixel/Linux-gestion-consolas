@@ -1,0 +1,8 @@
+﻿*.iso
+*.img
+*.qcow2
+*.o
+*.ko
+*.log
+__pycache__/
+.env
